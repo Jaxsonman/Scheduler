@@ -10,4 +10,4 @@ class Schedule extends Component {
     }
 }
 
-export default Library;
+export default Schedule;
