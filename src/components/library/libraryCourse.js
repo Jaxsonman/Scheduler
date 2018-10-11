@@ -19,16 +19,7 @@ class LibraryCourse extends Component {
     }
   }
 
- renderAction = function() {
-  if(!this.state.status)
-  return(
-    <Action
-          id={this.props.id}
-          onClick={() => this.props.toggleEnrolled(this.props.id)}
-          className="library-course__action"
-        />
-  )
- }.bind(this)
+ 
 
   handleCallback = function(status) {
     let height = this.state.height == 0 ? 'auto' : 0;
@@ -56,7 +47,11 @@ class LibraryCourse extends Component {
           id={this.props.id}
           className="library-course__arrow"
         />
-        {this.renderAction() }
+        <Action
+          id={this.props.id}
+          onClick={() => this.props.toggleEnrolled(this.props.id)}
+          className="library-course__action"
+        />
         <AnimateHeight
           duration={300}
           height={this.state.height}
