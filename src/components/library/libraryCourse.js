@@ -25,10 +25,16 @@ class LibraryCourse extends Component {
           </p>
         </div>
       )
+    }else {
     }
   }.bind(this);
 
   handleCallback = function(status) {
+    if(!status) {
+      document.getElementById('library-course').classList.add('library-course-selected');
+    }else {
+      document.getElementById('library-course').classList.remove('library-course-selected');
+    }
     this.setState({ status })
   }.bind(this)
 
